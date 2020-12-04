@@ -1,57 +1,155 @@
 * {
 padding:0;
 margin:0;
-vertical-align:baseline;
+/* vertical-align:baseline;
 list-style:none;
-border:0
+border:0 */
+}
+
+li {
+  list-style-type: none;
 }
 
 body {
   background-color: white; 
-}
-
-h1 {
-  color: navy;
-  margin-left: 20px;
-}
-
-.container{
-    display: flex;
+     display: flex;
     justify-content: center;
     flex-direction: row;
     height: 100vmin;
      align-items: flex-start;
 }
 
+
+
 .menu{
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     height: 100vmin;
-    background-color: #0747a6;
     text-align: center;
-    width: 10vmin; */
+    width: 64px;
+    background-color: #0747a6;
+
 }
 
-.logo > img{
-    border-radius: 100px;
+.logo {
+    margin: 16px 0 10px 0;
+    
 }
+
+.logo > object{
+    width: 32px;
+    opacity: 0.9;
+}
+
+.logo > object:hover{
+    opacity: 1;
+}
+
+
+.menu-itens{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    width: 64px;
+}
+
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+}
+
+.item > object{
+    width: 16px;
+    opacity: 0.8;
+}
+
+.item > object:hover{
+    width: 16px;
+    opacity: 1;
+}
+
+.item > object:active{
+    width: 16px;
+    opacity: 1;
+}
+
+.end-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0 10px 0;
+    width: 64px;
+    height: 48px;
+    opacity: 0.8;
+}
+
+.end-item > object{
+    width: 24px;
+}
+
 .user{
-    bottom: 0;
-    position: absolute;
-    justify-items: self-end;
+    margin-bottom: 16px;
+}
+
+.end-item:hover{
+    opacity: 1;
 }
 
 .user > img{
-    border-radius: 100px;
-    box-sizing: border-box;
+   border-radius: 100px;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 16px;
+    opacity: 0.8;
 }
 
+.user > img:hover{
+    opacity: 1;
+}
 
 .second-menu{
+    display: flex;
     height: 100%;
     width: 200px;
     background-color: #f0f2f5;
+    justify-content: center;
+}
 
+.second-menu > ul > li{
+    display: flex;
+    width: 180px;
+    height: 32px;
+    padding: 4px 8px;
+    align-items: center;
+}
+
+
+.second-menu > ul > li > a{
+  
+    flex-direction: row;
+    padding: 0 8px;
+    text-decoration: none;
+    display: flex;
+    font-size: 19px;
+    font-family: sans-serif;
+}
+
+.project{
+    font-size: 20px;
+}
+
+.second-menu > ul > li > a > label{
+        margin: 0 0 0 16px;
+        color: #364257;
+}
+
+.second-menu > ul > li:hover{
+    background-color: #e6e9ee;
 }
 
 .content{

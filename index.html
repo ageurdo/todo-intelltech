@@ -12,29 +12,83 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="menu">
-            <div class="logo">
-                <img src='src/img//logo.png' width="25px">
-            </div>
+    <div class="menu">
+
+        <div class="logo">
+            <object type="image/svg+xml" width="24px" data="src/img//logo.svg"></object>
+        </div>
+
+        <div class="menu-itens">
+
             <div>
-                <img src='src/img//favicon.png' width="25px">
+                <div class="item">
+                    <object type="image/svg+xml" width="16px" data="src/img//search.svg"></object>
+                </div>
+                <div class="item">
+                    <object type="image/svg+xml" width="16px" data="src/img//plus.svg"></object>
+                </div>
             </div>
-            <div>
-                <img src='src/img//favicon.png' width="25px">
-            </div>
-            <div class="user">
-                <img src='src/img//user.png' width="25px">
+            <div class="end-item">
+                <object type="image/svg+xml" width="20px" data="src/img//help.svg"></object>
             </div>
         </div>
 
-        <div class="second-menu">
-            <img src='src/img//favicon.png' width="25px">
+        <div class="user">
+            <img src='src/img//user.png' width="20px">
         </div>
 
-        <div class="content">
-            <img src='src/img//favicon.png' width="25px">
-        </div>
+    </div>
+
+
+
+    <nav class="second-menu">
+        <!-- <a class="project" href="#">
+            <img src='src/img//rocket.png' width="40px" height="40px">
+            <div> Teams in space</div>
+            <div> Software project</div>
+        </a> -->
+        <ul>
+
+            <li>
+                <a href="#">
+                    <object type="image/svg+xml" width="20px" data="src/img//menu.svg"></object>
+                    <label> Board</label>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <object type="image/svg+xml" width="20px" data="src/img//features.svg"></object>
+                    <label> Features</label>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <object type="image/svg+xml" width="20px" data="src/img//config.svg"></object>
+                    <label> Settings</label>
+                </a>
+            </li>
+            <hr style="margin:10px;height:0.5px;border-width:0;background-color:#d0d0d0">
+            <li>
+                <a href="#">
+                    <object type="image/svg+xml" width="20px" data="src/img//megafone.svg"></object>
+                    <label> Settings</label>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+
+
+
+
+
+
+    <div class="content">
+        <div w3-include-html="content.html"></div>
+        <div w3-include-html="h1.html"></div>
+        <div w3-include-html="content.html"></div>
+
+        teste
     </div>
 </body>
 
