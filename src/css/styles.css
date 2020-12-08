@@ -115,32 +115,71 @@ body {
 .second-menu{
     display: flex;
     height: 100%;
-    width: 200px;
+    width: 240px;
     background-color: #f0f2f5;
-    justify-content: center;
+    flex-direction: column;
+    padding: 0 16px;
+    padding: 24px 8px;
 }
 
 .second-menu > ul > li{
     display: flex;
-    width: 180px;
     height: 32px;
-    padding: 4px 8px;
     align-items: center;
+    border-radius: 4px;
+    padding: 4px 0;
 }
-
 
 .second-menu > ul > li > a{
   
     flex-direction: row;
-    padding: 0 8px;
     text-decoration: none;
     display: flex;
-    font-size: 19px;
+    font-size: 16px;
     font-family: sans-serif;
+    padding: 0 16px;
+}
+
+.second-menu > ul {
+
+    padding: 0 16px;
+}
+
+.second-menu > ul > li > a{
+  
+    flex-direction: row;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    font-family: sans-serif;
+    padding: 0 16px;
 }
 
 .project{
+    display: flex;
+    flex-direction: row;
     font-size: 20px;
+    padding: 0 16px;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.project > img {
+    margin: 0 8px 16px 0;
+    width: 40px;
+    height: 40px;
+}
+
+.project > div > div:first-child {
+    font-size: 16px;
+    font-weight: 600;
+    color: #293a5e;
+}
+
+.project > div > div:last-child {
+    font-size: 12px;
+    font-weight: 500;
+    color: #808a9f;
 }
 
 .second-menu > ul > li > a > label{
@@ -150,6 +189,7 @@ body {
 
 .second-menu > ul > li:hover{
     background-color: #e6e9ee;
+
 }
 
 .content{
