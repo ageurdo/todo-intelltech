@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" ng-app="todoApp">
 
 <head>
     <meta charset="UTF-8">
@@ -7,11 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" href="src/img/favicon.png" />
     <link rel="stylesheet" href="src/css/styles.css">
+    
+    <script src="src/lib/angular/angular.min.js"></script>
+    <script src="src/controllers/controller.js"></script>
 
     <title>Todo - Intelltech</title>
 </head>
 
-<body>
+<body ng-controller="webapi">
     <div class="menu">
 
         <div class="logo">
@@ -38,8 +41,6 @@
         </div>
 
     </div>
-
-
 
     <nav class="second-menu">
         <a class="project" href="#">
@@ -80,17 +81,20 @@
         </ul>
     </nav>
 
-
-
-
-
-
-    <div class="content">
-        <div w3-include-html="content.html"></div>
-        <div w3-include-html="h1.html"></div>
-        <div w3-include-html="content.html"></div>
-
-        teste
+    <div class="content" style="background-color: #fff;">
+        <div class="column">
+            <ul>
+                <li ng-repeat="task in tasks" class="taskCard">
+                    <div>{{task.name}}</div>
+                    <div>
+                        <span>SMS-001</span>
+                        <span>AR</span>
+                        <!-- <span>{{task.taskId}}</span>
+                            <span>{{task.userId}}</span> -->
+                    </div>
+                 </li>
+            </ul>
+        </div>
     </div>
 </body>
 

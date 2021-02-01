@@ -1,9 +1,7 @@
 * {
-padding:0;
-margin:0;
-/* vertical-align:baseline;
-list-style:none;
-border:0 */
+    padding:0;
+    margin:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 li {
@@ -195,5 +193,47 @@ body {
 .content{
     flex: 1;
     background-color: #fff;
+    
 }
+
+.column{
+    display: flex;
+    background-color: #f4f5f7;
+    width: 300px;
+    margin: 0 16px
+}
+
+.taskCard{
+    display: flex;
+    flex-grow: 0.6;
+    flex-direction: column;
+    width: 250px;
+    background-color: #fff;
+    margin: 8px;
+    border-radius: 4px;
+    padding: 16px;
+    box-shadow: 3px 3px 2px 0px rgba(0,0,0,0.05);
+}
+
+.taskCard > div:first-child {
+    flex: 1;
+}
+.taskCard > div:last-child {
+    align-self: flex-end;
+}
+
+.taskCard > div:last-child > :first-child{
+    color: #627087;
+    font-size: 12px;
+    margin-right: 8px;
+}
+
+.taskCard > div:last-child > :last-child{
+    background-color: #ff5630;
+    font-size: 12px;
+    padding: 8px;
+    margin-bottom: 48px;
+    border-radius: 100%;
+}
+
 

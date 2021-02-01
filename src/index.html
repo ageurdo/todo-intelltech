@@ -1,0 +1,22 @@
+<html ng-app="todoApp">
+<head>
+  ...
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-controller="webapi">
+
+  <ul>
+    <li ng-repeat="task in tasks">
+        <span>{{task.taskId}}</span>                
+        <span>{{task.name}}</span>                
+        <span>{{task.boardId}}</span>                
+        <span>{{task.statusId}}</span>                
+        <span>{{task.userId}}</span>                
+    </li>
+  </ul>
+
+</body>
+</html>
+
+
