@@ -15,6 +15,7 @@ body {
     flex-direction: row;
     height: 100vmin;
      align-items: flex-start;
+     overflow: hidden;
 }
 
 
@@ -193,14 +194,41 @@ body {
 .content{
     flex: 1;
     background-color: #fff;
+    margin: 0 16px;
+    overflow: auto; 
+    height: 100vmin;
+}
+
+.header{
+    font-size: 24px;
+    font-weight: 500;
+    color: #172c4f;
+}
+
+.header > input{
+    background-color: #f0f2f5;
+    border-radius: 4px;
+    height: 32px;
+    padding: 0 8px;
+    width: 284px;
+    outline: none;
+    border: none;
+    margin-bottom: 16px;
+    color: #172c4f;
     
 }
 
 .column{
     display: flex;
-    background-color: #f4f5f7;
+    background-color: #f0f2f5;
     width: 300px;
-    margin: 0 16px
+    flex-direction: column;
+}
+
+.column > p:first-of-type{
+    margin: 16px 24px;
+    color: #172c4f;
+    text-transform: uppercase;
 }
 
 .taskCard{
@@ -228,12 +256,18 @@ body {
     margin-right: 8px;
 }
 
-.taskCard > div:last-child > :last-child{
+.taskCard > div:last-child > :nth-child(2){
     background-color: #ff5630;
     font-size: 12px;
     padding: 8px;
     margin-bottom: 48px;
     border-radius: 100%;
+    -moz-user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select:none; 
+    user-select:none;
+    -o-user-select:none;
+    color: #fff;
 }
 
 

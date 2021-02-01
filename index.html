@@ -15,87 +15,94 @@
 </head>
 
 <body ng-controller="webapi">
-    <div class="menu">
 
-        <div class="logo">
-            <object type="image/svg+xml" data="src/img//logo.svg"></object>
-        </div>
+ 
+        <div class="menu">
 
-        <div class="menu-itens">
-
-            <div>
-                <div class="item">
-                    <object type="image/svg+xml" width="16px" data="src/img//search.svg"></object>
-                </div>
-                <div class="item">
-                    <object type="image/svg+xml" width="16px" data="src/img//plus.svg"></object>
-                </div>
+            <div class="logo">
+                <object type="image/svg+xml" data="src/img//logo.svg"></object>
             </div>
-            <div class="end-item">
-                <object type="image/svg+xml" width="20px" data="src/img//help.svg"></object>
-            </div>
-        </div>
 
-        <div class="user">
-            <img src='src/img//user.png'>
-        </div>
+            <div class="menu-itens">
 
-    </div>
-
-    <nav class="second-menu">
-        <a class="project" href="#">
-            <img src='src/img//rocket.png'>
-            <div>
-                <div> Teams in space</div>
-                <div> Software project</div>
-            </div>
-        </a>
-        <ul>
-
-            <li>
-                <a href="#">
-                    <object type="image/svg+xml" width="20px" data="src/img//menu.svg"></object>
-                    <label> Board</label>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <object type="image/svg+xml" width="20px" data="src/img//features.svg"></object>
-                    <label> Features</label>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <object type="image/svg+xml" width="20px" data="src/img//config.svg"></object>
-                    <label> Settings</label>
-                </a>
-            </li>
-            <hr style="margin:10px;height:0.5px;border-width:0;background-color:#d0d0d0">
-            <li>
-                <a href="#">
-                    <object type="image/svg+xml" width="20px" data="src/img//megafone.svg"></object>
-                    <label> Give feedback</label>
-                </a>
-            </li>
-
-        </ul>
-    </nav>
-
-    <div class="content" style="background-color: #fff;">
-        <div class="column">
-            <ul>
-                <li ng-repeat="task in tasks" class="taskCard">
-                    <div>{{task.name}}</div>
-                    <div>
-                        <span>SMS-001</span>
-                        <span>AR</span>
-                        <!-- <span>{{task.taskId}}</span>
-                            <span>{{task.userId}}</span> -->
+                <div>
+                    <div class="item">
+                        <object type="image/svg+xml" width="16px" data="src/img//search.svg"></object>
                     </div>
-                 </li>
-            </ul>
-        </div>
-    </div>
-</body>
+                    <div class="item">
+                        <object type="image/svg+xml" width="16px" data="src/img//plus.svg"></object>
+                    </div>
+                </div>
+                <div class="end-item">
+                    <object type="image/svg+xml" width="20px" data="src/img//help.svg"></object>
+                </div>
+            </div>
 
+            <div class="user">
+                <img src='src/img//user.png'>
+            </div>
+
+        </div>
+
+        <nav class="second-menu">
+            <a class="project" href="#">
+                <img src='src/img//rocket.png'>
+                <div>
+                    <div> Teams in space</div>
+                    <div> Software project</div>
+                </div>
+            </a>
+            <ul>
+
+                <li>
+                    <a href="#">
+                        <object type="image/svg+xml" width="20px" data="src/img//menu.svg"></object>
+                        <label> Board</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <object type="image/svg+xml" width="20px" data="src/img//features.svg"></object>
+                        <label> Features</label>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <object type="image/svg+xml" width="20px" data="src/img//config.svg"></object>
+                        <label> Settings</label>
+                    </a>
+                </li>
+                <hr style="margin:10px;height:0.5px;border-width:0;background-color:#d0d0d0">
+                <li>
+                    <a href="#">
+                        <object type="image/svg+xml" width="20px" data="src/img//megafone.svg"></object>
+                        <label> Give feedback</label>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+        <div class="content" style="background-color: #fff; ">
+            <section class="header">
+              <p>Board</p>
+              <input/>
+            </section>
+            <div class="column">
+                <p>To-do</p>
+                <ul>
+                    <li ng-repeat="task in tasks" class="taskCard">
+                        <div>{{task.name}}</div>
+                        <div>
+                            <span>Ticket-{{task.taskId}}</span>
+                            <span>AR</span>
+                            <!-- <span>{{task.userId}}</span> -->
+                            <span ng-repeat="user in users | filter: task.userId ">
+                                <p>{{user.name}}</p>
+                            </span>
+                        </div>
+                    </li>                                  
+                </ul>
+            </div>
+        </div>
+</body>
 </html>
