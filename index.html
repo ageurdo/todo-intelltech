@@ -7,9 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" href="src/img/favicon.png" />
     <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="src/lib/draggable/draggable.js"></script>
+    
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script src="src/lib/angular/angular.min.js"></script>
     <script src="src/controllers/controller.js"></script>
+
 
     <title>Todo - Intelltech</title>
 </head>
@@ -82,27 +89,71 @@
 
             </ul>
         </nav>
-        <div class="content" style="background-color: #fff; ">
-            <section class="header">
-              <p>Board</p>
-              <input/>
+        <div class="wrapper" style="background-color: #fff; ">
+            <h1>Board</h1>
+            <section class="headerSearch">
+                <input></input>
+                <span class="iconify" data-icon="fluent:search-24-filled" data-inline="false"></span>
             </section>
-            <div class="column">
-                <p>To-do</p>
-                <ul>
-                    <li ng-repeat="task in tasks" class="taskCard">
-                        <div>{{task.name}}</div>
-                        <div>
-                            <span>Ticket-{{task.taskId}}</span>
-                            <span>AR</span>
-                            <!-- <span>{{task.userId}}</span> -->
-                            <span ng-repeat="user in users | filter: task.userId ">
-                                <p>{{user.name}}</p>
-                            </span>
-                        </div>
-                    </li>                                  
-                </ul>
-            </div>
+
+            <section class="content">
+                <div class="column">
+                    <p>To-do</p>
+                        <ul id="sortable1" class="connectedSortable">
+                            <li ng-repeat="task in tasks" class="taskCard">
+                                <div onclick="truncate(task.name)">{{task.name}}</div>
+                                <div>
+                                    <span>Ticket-{{task.taskId}}</span>
+                                    <span>
+                                        {{task.user.nickName}}
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                </div>
+                <div class="column">
+                    <p>To-do</p>
+                        <ul id="sortable2" class="connectedSortable">
+                            <li ng-repeat="task in tasks" class="taskCard">
+                                <div onclick="truncate(task.name)">{{task.name}}</div>
+                                <div>
+                                    <span>Ticket-{{task.taskId}}</span>
+                                    <span>
+                                        {{task.user.nickName}}
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                </div>
+                <div class="column">
+                    <p>To-do</p>
+                        <ul id="sortable3" class="connectedSortable">
+                            <li ng-repeat="task in tasks" class="taskCard">
+                                <div onclick="truncate(task.name)">{{task.name}}</div>
+                                <div>
+                                    <span>Ticket-{{task.taskId}}</span>
+                                    <span>
+                                        {{task.user.nickName}}
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                </div>
+                <div class="column">
+                    <p>To-do</p>
+                        <ul id="sortable3" class="connectedSortable">
+                            <li ng-repeat="task in tasks" class="taskCard">
+                                <div onclick="truncate(task.name)">{{task.name}}</div>
+                                <div>
+                                    <span>Ticket-{{task.taskId}}</span>
+                                    <span>
+                                        {{task.user.nickName}}
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                </div>
+            </section>
         </div>
 </body>
 </html>
